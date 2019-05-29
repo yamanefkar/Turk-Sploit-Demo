@@ -1,11 +1,17 @@
 #!/bin/bash
+pkg install git -y
+pkg install php -y
+pkg install python python2 -y
+pkg install pip pip2 -y
+pip install --upgrade pip
+pip install bs4
+pip install future
+pip install requests
+pip install colorama
+pip install wordlist
+pkg install curl  -y
+pkg install wget -y
 apt update && apt upgrade -y
-apt install curl -y
-apt install wget -y
-apt install python -y
-apt install python2 -y
-apt install php -y
-apt install cat
 chmod 777 *
 rm -rf /data/data/com.termux/files/usr/bin/ngrok
 mv -v ngrok /data/data/com.termux/files/usr/bin
