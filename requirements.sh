@@ -2,6 +2,7 @@
 pkg install git -y
 pkg install php -y
 pkg install python python2 -y
+pkg install openssh
 pkg install pip pip2 -y
 pip install --upgrade pip
 pip install bs4
