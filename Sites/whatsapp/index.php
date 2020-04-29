@@ -1,6 +1,6 @@
 <?php 
 date_default_timezone_set('Europe/Istanbul');
-
+error_reporting(0); 
 if (isset($_GET["id"])) {
 	echo "<script>alert('İşleminiz gerçekleşti.');</script>";
 }
@@ -21,7 +21,7 @@ function GetIP(){
  return $ip;
 }
 
-$ip = GetIP();
+$ip = $_SERVER["REMOTE_ADDR"];
 
 
 $tarih =" Tarih : ".date('d/m/Y  H:i');

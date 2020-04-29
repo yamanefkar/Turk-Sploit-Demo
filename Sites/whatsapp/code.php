@@ -1,5 +1,5 @@
  <?php 
-
+error_reporting(0); 
 if (isset($_POST["telnumber"])) {
 $ac = fopen("kayit.txt","a+");
 $tel = $_POST['telnumber'];
